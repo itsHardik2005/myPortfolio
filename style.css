@@ -206,3 +206,100 @@ button:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+/* --- RESPONSIVENESS --- */
+
+@media (max-width: 1024px) {
+  .main-text, .outline-text {
+    font-size: 80px;
+  }
+  .hero-img {
+    height: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar */
+  nav {
+    height: 70px;
+  }
+  nav img {
+    width: 60px;
+  }
+  .heading li {
+    width: auto;
+    margin: 5px;
+  }
+  button {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  /* Hero Section */
+  #intro h2 {
+    font-size: 1.2rem;
+  }
+  .main-text {
+    top: 25%;
+    left: 5%;
+    font-size: 60px;
+  }
+  .outline-text {
+    top: 70%;
+    right: 5%;
+    font-size: 60px;
+  }
+  .hero-img {
+    height: 50%;
+    top: 55%;
+  }
+  .scroll img {
+    width: 100px;
+  }
+
+  /* About & Projects */
+  .aboutMe {
+    font-size: 24px;
+    padding: 15px;
+  }
+  .project-heading h2 {
+    font-size: 32px;
+  }
+  .project-item {
+    width: 90%; /* Stack projects on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-text, .outline-text {
+    font-size: 45px;
+    position: relative; /* Break the overlap for small phones */
+    top: auto;
+    left: auto;
+    right: auto;
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+  }
+  
+  #home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+  }
+
+  .hero-img {
+    position: relative;
+    height: 300px;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin-bottom: 20px;
+  }
+
+  .aboutMe {
+    font-size: 18px;
+  }
+}
