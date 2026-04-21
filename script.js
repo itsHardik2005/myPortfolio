@@ -69,7 +69,6 @@ gsap.from('.aboutMe .word', {
 })
 const tl = gsap.timeline();
 
-// Text intro
 tl.from(".intro-text", {
   scale: 0.6,
   opacity: 0,
@@ -77,7 +76,6 @@ tl.from(".intro-text", {
   ease: "power3.out"
 });
 
-// Diagonal corner reveal
 tl.to(".diag-1", {
   x: "100%",
   y: "-100%",
@@ -92,13 +90,11 @@ tl.to(".diag-2", {
   ease: "power4.inOut"
 }, "<");
 
-// Fade text
 tl.to(".intro-text", {
   opacity: 0,
   duration: 0.5
 }, "-=0.8");
 
-// Remove intro
 tl.to("#hello", {
   opacity: 0,
   duration: 0.5,
@@ -127,6 +123,7 @@ const webdev = gsap.timeline({
       },
       
     )
+    
     .to(
       ".outline-text",
       {
@@ -134,10 +131,37 @@ const webdev = gsap.timeline({
       },
       0
     )
+    
     .to(
       ".hero-img",
       {
         scale: 0.8,
       },
       0
+    )
+    .to(
+      ".scroll img",
+      {
+        top: "100%",
+      },
+      0
     );
+    gsap.from(".main-text", {
+  x: -200,
+  opacity: 0,
+  duration: 1,
+  ease: "power3.out"
+});
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".site-footer", {
+  borderTopLeftRadius: "0px",
+  borderTopRightRadius: "0px",
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".site-footer",
+    start: "top bottom",
+    end: "top center",
+    scrub: true,
+  },
+});

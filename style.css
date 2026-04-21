@@ -207,6 +207,83 @@ button:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+.site-footer {
+  position: relative;
+  margin-top: 120px;
+  padding: 80px 6% 30px;
+  /* Deep Black (#000000) to Dark Charcoal (#333333) */
+  background: black;
+
+
+
+
+  color: #fff;
+
+  /* CURVED TOP */
+  border-top-left-radius: 720px;
+  border-top-right-radius: 720px;
+
+  transition: border-radius 0.4s ease;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  margin-bottom: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.footer-col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+}
+
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
 /* --- RESPONSIVENESS --- */
 
 @media (max-width: 1024px) {
@@ -279,7 +356,7 @@ button:hover {
   } 
   .outline-text {
     font-size: 45px;
-    position: relative; /* Break the overlap for small phones */
+    position: relative; 
     top: auto;
     left: auto;
     right: auto;
@@ -307,5 +384,13 @@ button:hover {
 
   .aboutMe {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
   }
 }
