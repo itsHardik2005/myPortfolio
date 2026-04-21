@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
     .to(
       "nav",
       {
-        width: "50%",
+        width: "70%",
         borderRadius: "700px",
         duration: 1,
         position: "fixed",
@@ -31,6 +31,7 @@ window.addEventListener("load", () => {
       },
       
     )
+    
     .to(
       "nav img",
       {
@@ -106,3 +107,37 @@ tl.to("#hello", {
     document.body.style.overflow = "auto";
   }
 });
+
+
+const webdev = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#section1",
+      start: "top top",
+      end: "bottom top",
+      scrub: 1,
+    },
+  });
+
+  webdev
+  .to(
+      ".main-text",
+      {
+        left: "05%",
+
+      },
+      
+    )
+    .to(
+      ".outline-text",
+      {
+        right: "05%",
+      },
+      0
+    )
+    .to(
+      ".hero-img",
+      {
+        scale: 0.8,
+      },
+      0
+    );

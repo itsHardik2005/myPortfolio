@@ -271,14 +271,20 @@ button:hover {
 }
 
 @media (max-width: 480px) {
-  .main-text, .outline-text {
+  nav button{
+    display: none;
+  }
+  .main-text{
+
+  } 
+  .outline-text {
     font-size: 45px;
     position: relative; /* Break the overlap for small phones */
     top: auto;
     left: auto;
     right: auto;
     text-align: center;
-    display: block;
+    /* display: block; */
     margin: 20px 0;
   }
   
